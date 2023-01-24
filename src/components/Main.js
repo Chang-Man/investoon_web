@@ -16,8 +16,8 @@ export function Main({ setCurrentPage }) {
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
-        pt: "2%",
-        pb: "2%",
+        pt: "8%",
+        pb: "8%",
       }}
     >
       <ArrowCircleUpIcon sx={{ color: "#865FF5", fontSize: "2rem" }} />
@@ -40,9 +40,10 @@ export function Main({ setCurrentPage }) {
         </Typography>
       </Box>
       <ArrowCircleDownIcon
-        sx={{ color: "white", fontSize: "2rem", cursor: "pointer" }}
+        sx={{ color: "white", fontSize: "1.8rem", cursor: "pointer" }}
         onClick={() => setCurrentPage((prev) => prev + 1)}
       />
+
       {/* <DownWhiteKey setCurrentPage={setCurrentPage} /> */}
     </Box>
   );
