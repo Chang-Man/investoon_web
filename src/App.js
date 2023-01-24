@@ -1,6 +1,7 @@
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import ReactPageScroller from "react-page-scroller";
 import { useState, useEffect } from "react";
+import { Main } from "./components/Main";
 
 const theme = createTheme({
   typography: {
@@ -21,13 +22,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ height: "calc(var(--vh, 1vh) * 100)" }}>
-        <ReactPageScroller
-          animationTimer={700}
-          pageOnChange={(num) => {
-            setCurrentPage(num);
-          }}
-          customPageNumber={currentPage}
-        ></ReactPageScroller>
+        {/* <ReactPageScroller
+        // animationTimer={700}
+        // pageOnChange={(num) => {
+        //   setCurrentPage(num);
+        // }}
+        // customPageNumber={currentPage}
+        > */}
+        <Main setCurrentPage={setCurrentPage} />
+        {/* </ReactPageScroller> */}
       </Box>
     </ThemeProvider>
   );
